@@ -1,11 +1,8 @@
-const reader = require('xlsx');
-const file = reader.readFile('./Vendas.xlsx');
-const sheets = file.SheetNames;
+const XLSX = require('xlsx');
+const workbook = XLSX.readFile('Custo.xlsx');
+const sheetName = workbook.SheetNames[0]; // Pega o nome da primeira planilha
 
-for(let i = 0; i < sheets.length; i++){
-    const data = reader.utils.sheet_to_json(file.Sheets[file.SheetNames[i]])
+const worksheet = workbook.Sheets[sheetName];
+const data = XLSX.utils.sheet_to_json(worksheet);
 
-    data.forEach((res) =>{
-        console.log(res);
-    })
-}
+console.log(data);
