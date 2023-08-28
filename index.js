@@ -6,3 +6,4 @@ const worksheet = workbook.Sheets[sheetName];
 const data = XLSX.utils.sheet_to_json(worksheet);
 
 console.log(data);
+console.log("Olha só e não é que deu certo!");
