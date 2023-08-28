@@ -1,5 +1,5 @@
 const XLSX = require('xlsx');
-const workbook = XLSX.readFile('Custo.xlsx');
+const workbook = XLSX.readFile('Nome_do_aquivo.xlsx');
 const sheetName = workbook.SheetNames[0]; // Pega o nome da primeira planilha
 
 const worksheet = workbook.Sheets[sheetName];
